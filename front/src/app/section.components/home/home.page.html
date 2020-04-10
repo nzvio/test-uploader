@@ -1,0 +1,19 @@
+<div id="home">
+    <div class="gal">
+        <div 
+            class="gal-item" 
+            [class.active]="p.active"
+            *ngFor="let p of photos; let i = index;" 
+            [style.background-image]="p.img ? 'url(/assets/images/users/'+p.img+')' : 'none'"
+            (click)="activate(p);"
+            draggable="true"
+            (dragstart)="onDragStart($event);"
+            (dragenter)="onDragEnter($event);"
+            (dragleave)="onDragLeave($event);"
+            (dragover)="onDragOver($event);"
+            (drop)="onDrop($event);"
+            id="photo-{{i}}"
+        ></div>
+        <div class="gal-item btn" (click)="openFileDialog();">Select photo</div>
+    </div>
+</div>

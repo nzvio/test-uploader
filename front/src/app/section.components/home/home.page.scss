@@ -1,0 +1,11 @@
+#home {
+    .gal {
+        display: flex;
+        .gal-item {
+            width: 150px; height: 200px; border: 1px #eee solid; margin: 10px; background-size: cover; background-position: center top; transition: transform 0.3s ease 0s;
+            &.btn {display: flex; cursor: pointer; justify-content: center; align-items: center;}
+            &.active {border: 2px #00f solid;}
+            &.over {transform: scale(1.1);}
+        }
+    }
+}
